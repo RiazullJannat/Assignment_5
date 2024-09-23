@@ -36,38 +36,38 @@
         <nav class=" sticky top-0 z-50">
             <div class=" py-6 bg-accent">
                 <div class="flex justify-between container mx-auto">
-                    <button class="btn bg-btnBg sm:btn-sm md:btn-md lg:btn-lg">Blog</button>
+                    <button class="btn bg-btnBg sm:btn-sm md:btn-md lg:btn-lg"><a href="blog.html">Blog</a></button>
                     <div class="flex justify-center items-center gap-4">
                         <span><img src="assets/logo.png" alt="##"></span>
                         <h1><span class="font-semibold text-[20px] hidden sm:block">Donate Bangladesh</span></h1>
                     </div>
                     <div class="flex justify-center items-center gap-4">
                         <span><img src="assets/coin.png" alt="##"></span>
-                        <span class="text-[20] text-secondary font-semibold">5500 BDT</span>
+                        <p><span id="myBalance" class="text-[20] text-secondary font-semibold">5500</span> BDT</p>
                     </div>
                 </div>
             </div>
-            <div class=" py-8 flex flex-row gap-4 justify-center">
-                <button class="btn  sm:btn-sm md:btn-md lg:btn-lg bg-btnBg">Donate</button>
-                <button class="btn sm:btn-sm md:btn-md lg:btn-lg border">History</button>
+            <div  class=" py-8 flex flex-row gap-4 justify-center">
+                <button  id="donateBtn" class="btn  sm:btn-sm md:btn-md lg:btn-lg bg-btnBg text-secondary">Donate</button>
+                <button id="historyBtn" class="btn sm:btn-sm md:btn-md lg:btn-lg border text-secondary">History</button>
             </div>
         </nav>
     </header>
     <!-- main -->
     <main>
-        <section class="container mx-auto ">
+        <section id="donateSection" class="container mx-auto ">
             <!-- Noakhali -->
             <section class="flex flex-col sm:flex-row justify-between gap-5 border rounded-3xl p-[32px]">
                 <img src="assets/noakhali.png" alt="$$" >
                 <div class="sm:w-[50%]">
                     <div class="btn text-secondary">
                         <img src="assets/coin.png" alt="##">
-                        <span>0 BDT</span>
+                        <p><span id="noakhaliBalance">0</span>BDT</p>
                     </div>
                     <h2 class="font-bold text-[17px] sm:text-[20px] my-2 sm:my-4">Donate for Flood at Noakhali, Bangladesh</h2>
                     <p class="text-secondary text-[14px] lg:text-[16px]"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-                    <input type="text" name="" id="" placeholder="Write Donation Amount" class="border w-full p-4 my-3 rounded-xl">
-                    <button class="btn w-full bg-btnBg" onclick="my_modal_5.showModal()">Donate Now</button>
+                    <input type="text" name="" id="noakhaliInp" placeholder="Write Donation Amount" class="border w-full p-4 my-3 rounded-xl">
+                    <button id="noakhaliBtn" class="btn w-full bg-btnBg" onclick="addDonation(event)">Donate Now</button>
                 </div>
             </section>
             <!-- Feni -->
@@ -76,12 +76,12 @@
                 <div class="sm:w-[50%]">
                     <div class="btn text-secondary">
                         <img src="assets/coin.png" alt="##">
-                        <span>600 BDT</span>
+                        <p><span id="feniBalance">600</span>BDT</p>
                     </div>
                     <h2 class="font-bold text-[17px] sm:text-[20px] my-2 sm:my-4">Donate for Flood at Feni, Bangladesh</h2>
                     <p class="text-secondary text-[14px] lg:text-[16px]"> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
-                    <input type="text" name="" id="" placeholder="Write Donation Amount" class="border w-full p-4 my-3 rounded-xl">
-                    <button class="btn w-full bg-btnBg" onclick="my_modal_5.showModal()">Donate Now</button>
+                    <input  type="text" name="" id="feniInp" placeholder="Write Donation Amount" class="border w-full p-4 my-3 rounded-xl">
+                    <button id="feniBtn" class="btn w-full bg-btnBg" onclick="addDonation(event)">Donate Now</button>
                 </div>
             </section>
             <!-- Quota movement -->
@@ -90,18 +90,18 @@
                 <div class="sm:w-[50%]">
                     <div class="btn text-secondary">
                         <img src="assets/coin.png" alt="##">
-                        <span>2400 BDT</span>
+                        <span id="quotaBalance">2400</span>
                     </div>
                     <h2 class="font-bold text-[17px] sm:text-[20px] my-2 sm:my-4">Aid for Injured in the Quota Movement</h2>
                     <p class="text-secondary text-[14px] lg:text-[16px]"> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
-                    <input type="text" name="" id="" placeholder="Write Donation Amount" class="border w-full p-4 my-3 rounded-xl">
-                    <button class="btn w-full bg-btnBg" onclick="my_modal_5.showModal()">Donate Now</button>
+                    <input type="text" name="" id="quotaInp" placeholder="Write Donation Amount" class="border w-full p-4 my-3 rounded-xl">
+                    <button id="quotaBtn" class="btn w-full bg-btnBg" onclick="addDonation(event)">Donate Now</button>
                 </div>
             </section>
         </section>
         <!-- history section -->
-         <section id="historySection" class="hidden">
-            <h1 id="default text" class="text-center">No history yet.</h1>
+         <section id="historySection" class="hidden container mx-auto sm:h-[60vh]">
+            <h1 id="defaultText" class="text-center">No history yet.</h1>
          </section>
          <!-- modal -->
          <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
