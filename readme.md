@@ -13,9 +13,9 @@
 ## Design
 
 - **Navbar**: Create a visually appealing navbar with the following structure:
-  - Logo positioned in the middle.
-  - "Blog" button on the left.
-  - Account balance with a coin icon on the right.
+  X Logo positioned in the middle.
+  X "Blog" button on the left.
+  X Account balance with a coin icon on the right.
   - "Donation" and "History" buttons in the center (as per Figma).
 - **Donation Cards**: Create 3 donation cards with the following details:
   - Image on the left.
