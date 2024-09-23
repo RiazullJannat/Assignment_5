@@ -47,7 +47,45 @@
             </div>
         </nav>
     </header>
-    <main></main>
+    <!-- main -->
+    <main>
+        <!-- FAQ section -->
+        <section class="container mx-auto flex flex-col gap-6 my-10">
+            <h1 class="font-extrabold text-[32px]">Important FAQ</h1>
+            <div class="collapse bg-base-200 border">
+                <input type="radio" name="my-accordion-1" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is document object model (DOM)?</div>
+                <div class="collapse-content">
+                  <p>The Document Object Model (DOM) is a programming interface that represents the structure of an HTML or XML document as a tree of objects. Each element in the document, such as headings, paragraphs, images, and links, is represented as a node in this tree, allowing for easy access and manipulation.</p>
+                </div>
+            </div>
+
+            <div class="collapse bg-base-200 border">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                  <p>
+                    To select an element from the Document Object Model (DOM), you can use several methods. For instance, getElementById('myId') allows you to select an element by its unique ID, while getElementsByClassName('myClass') retrieves all elements with a specific class name. If you need to select the first element that matches a CSS selector, querySelector('.myClass') is useful, and for selecting all matching elements, querySelectorAll('div') can be employed. These methods enable easy access and manipulation of elements within a webpage, facilitating dynamic interactions and updates.</p>
+                </div>
+            </div>
+
+            <div class="collapse bg-base-200 border">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-xl font-medium">What is the event delegation in the context of the DOM, and why is it use-full?</div>
+                <div class="collapse-content">
+                  <p>Event delegation is a technique in the Document Object Model (DOM) that allows you to manage events more efficiently by attaching a single event listener to a parent element rather than individual listeners to multiple child elements. When an event occurs on a child element, the event bubbles up to the parent, where the listener can handle it. This approach is useful because it reduces memory usage and improves performance, especially in dynamic applications where child elements may change frequently. It also simplifies code maintenance, as you only need to manage one event listener instead of several.</p>
+                </div>
+            </div>
+
+            <div class="collapse bg-base-200 border">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element attribute and styles using DOM?</div>
+                <div class="collapse-content">
+                  <p>To manipulate an element's attributes and styles using the Document Object Model (DOM), you first need to access the element using methods like document.getElementById(), document.querySelector(), or document.getElementsByClassName(). Once you have a reference to the element, you can change its attributes using the setAttribute() method, such as element.setAttribute('src', 'new-image.jpg') to update the src of an <img> element. Alternatively, you can modify attributes directly as properties, like setting element.src = 'new-image.jpg'. For styling, you can change inline styles using the style property; for instance, element.style.color = 'red' will alter the text color. To apply multiple styles at once, the cssText property can be utilized, allowing you to set several styles in one go, such as element.style.cssText = 'color: red; background-color: blue;'. These methods enable dynamic adjustments to the appearance and behavior of HTML elements on your webpage.</p>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer></footer>
 </body>
 </html>
