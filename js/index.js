@@ -25,7 +25,7 @@ function addDonation(event) {
     if(clickedBtnId){
         const amount=parseFloat(document.getElementById(clickedBtnId.inpId).value);
         const balance=document.getElementById(clickedBtnId.balanceId);
-        if(!isNaN(amount) && amount>0){
+        if(!isNaN(amount) && (amount>0 && amount<= parseFloat(myBalance.innerText))){
             // update main balance
             myBalance.innerText=(parseFloat(myBalance.innerText)-amount).toFixed(2);
             // update donation balance
